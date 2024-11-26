@@ -23,7 +23,7 @@ public class Delete extends AppCompatActivity {
         this.contentResolver = contentResolver;
         this.uri = uri;
         this.selection = selection.isEmpty() ? null : selection;
-        this.selectionArgs = selectionArgs.isEmpty() ? null : selection;
+        this.selectionArgs = selectionArgs.isEmpty() ? null : selectionArgs;
     }
 
     @Override
@@ -32,8 +32,8 @@ public class Delete extends AppCompatActivity {
     }
 
     public void doDelete() {
-        String[] arraySelectionArgs = selectionArgs != null ? selectionArgs.split(",") : null;
         selection = selection != null ? selection.trim() : null;
+        String[] arraySelectionArgs = selectionArgs != null ? selectionArgs.split(",") : null;
 
 //        delete(Uri uri, String selection, String[] selectionArgs) {
         try {

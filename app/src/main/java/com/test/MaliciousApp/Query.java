@@ -46,7 +46,7 @@ public class Query extends AppCompatActivity {
         String[] arraySelectionArgs = selectionArgs != null ? selectionArgs.split(",") : null;
         try {
 //            query(Uri uri, String[] projection, String selection, String[] selectionArgs, String sortOrder) {
-            Cursor cursor = contentResolver.query(uri, arrayProjection, selection, arraySelectionArgs, null);
+            Cursor cursor = contentResolver.query(uri, arrayProjection, selection, arraySelectionArgs, sortOrder);
             if (cursor == null){
                 MyUtil.myToast(context, "Cursor is Null");
                 return;
